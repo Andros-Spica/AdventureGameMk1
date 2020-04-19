@@ -5,21 +5,20 @@ public class AttachEquipment : MonoBehaviour {
 
   public SkinnedMeshRenderer playerMesh;
   public SkinnedMeshRenderer playerHair;
-  public SkinnedMeshRenderer playerHat;
   public SkinnedMeshRenderer playerShirt;
   public SkinnedMeshRenderer playerTrousers;
   public SkinnedMeshRenderer playerShoes;
-  public SkinnedMeshRenderer playerSword;
 
-  private Animator animator;
+  public SkinnedMeshRenderer playerSword;
   private SkinnedMeshRenderer playerSwordInstantiated = null;
 
+
+  private Animator animator;
 
 
   void Start() {
     animator = GetComponentInChildren<Animator>();
     AttachMesh(playerHair);
-    AttachMesh(playerHat);
     AttachMesh(playerShirt);
     AttachMesh(playerTrousers);
     AttachMesh(playerShoes);
@@ -40,7 +39,10 @@ public class AttachEquipment : MonoBehaviour {
 
 
 
+
+
   private bool swordEquipped = false;
+
 
   void Update() {
     if (Input.GetKeyDown(KeyCode.S)) {
@@ -58,10 +60,6 @@ public class AttachEquipment : MonoBehaviour {
 
 
 }
-
-
-
-
 
 
 
